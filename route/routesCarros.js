@@ -19,14 +19,14 @@ router.post('/cadastrarCategoria', (req, res)=>{
         ()=>{
             return res.status(201).json({
                 erroStatus:false,
-                mensagemStatus:"CATEGORIA INSERIDA COM SUCESSO."
+                mensagemStatus:"CARRO INSERIDO COM SUCESSO."
             })
         }
     ).catch(
         (error)=>{
             return res.status(400).json({
                 erroStatus:true,
-                mensagemStatus:"ERRO AO CADASTRAR CATEGORIA.",
+                mensagemStatus:"ERRO AO INSERIR O CARRO.",
                 errorObject:error
             });
         }
@@ -46,7 +46,7 @@ router.get('/listarCategoria', (req, res)=>{
                 //console.log(response);
                 return res.status(200).json({
                     erroStatus:false,
-                    mensagemStatus:"CATEGORIAS LISTADAS COM SUCESSO.",
+                    mensagemStatus:"CARROS LISTADOS COM SUCESSO.",
                     data:response
                 })
             }
@@ -54,7 +54,7 @@ router.get('/listarCategoria', (req, res)=>{
             (error)=>{
                 return res.status(400).json({
                     erroStatus:true,
-                    mensagemStatus:"ERRO AO LISTAR AS CATEGORIA.",
+                    mensagemStatus:"ERRO AO LISTAR OS CARROS.",
                     errorObject:error
                 });
             }
@@ -74,7 +74,7 @@ router.get('/listarCategoriaPK/:cod_carro', (req, res)=>{
         (response)=>{
             return res.status(200).json({
                 erroStatus:false,
-                mensagemStatus:"CATEGORIA RECUPERADA COM SUCESSO.",
+                mensagemStatus:"CARRO RECUPERADA COM SUCESSO.",
                 data:response
             })
         }
@@ -83,7 +83,7 @@ router.get('/listarCategoriaPK/:cod_carro', (req, res)=>{
         (error)=>{
             return res.status(400).json({
                 erroStatus:true,
-                mensagemStatus:"ERRO AO RECUPERAR A CATEGORIA.",
+                mensagemStatus:"ERRO AO RECUPERAR OS CARROS.",
                 errorObject:error
             });
         }
@@ -101,7 +101,7 @@ router.get('/listarCategoriaNOME/:nome_carro', (req, res)=>{
         (response)=>{
             return res.status(200).json({
                 erroStatus:false,
-                mensagemStatus:"CATEGORIA RECUPERADA COM SUCESSO.",
+                mensagemStatus:"CARRO RECUPERADO COM SUCESSO.",
                 data:response
             })
         }
@@ -110,7 +110,7 @@ router.get('/listarCategoriaNOME/:nome_carro', (req, res)=>{
         (error)=>{
             return res.status(400).json({
                 erroStatus:true,
-                mensagemStatus:"ERRO AO RECUPERAR A CATEGORIA.",
+                mensagemStatus:"ERRO AO RECUPERAR O CARRO.",
                 errorObject:error
             });
         }
@@ -132,14 +132,14 @@ router.put('/alterarCategoria', (req, res)=>{
         ()=>{
             return res.status(200).json({
                 erroStatus:false,
-                mensagemStatus:"CATEGORIA ALTERADA COM SUCESSO."
+                mensagemStatus:"CARRO ALTERADO COM SUCESSO."
             })
         }
     ).catch(
         (error)=>{
             return res.status(400).json({
                 erroStatus:true,
-                mensagemStatus:"ERRO AO ALTERAR A CATEGORIA.",
+                mensagemStatus:"ERRO AO ALTERAR O CARRO.",
                 errorObject:error
             });
         }
@@ -158,14 +158,14 @@ router.delete('/excluirCategoria/:cod_carro', (req, res)=>{
         ()=>{
             return res.status(200).json({
                 erroStatus:false,
-                mensagemStatus:"CATEGORIA EXCLUIDA COM SUCESSO."
+                mensagemStatus:"CARRO EXCLUIDO COM SUCESSO."
             })
         }
     ).catch(
         (error)=>{
             return res.status(400).json({
                 erroStatus:true,
-                mensagemStatus:"ERRO AO EXCLUIR A CATEGORIA.",
+                mensagemStatus:"ERRO AO EXCLUIR CARRO.",
                 errorObject:error
             });
         }
