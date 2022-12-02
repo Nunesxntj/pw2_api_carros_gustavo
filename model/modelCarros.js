@@ -21,5 +21,5 @@ const modelCarro = connection.define(
     }
 );
 
-//modelCarro.sync({force:true});
+// modelCarro.sync({force:true});
 module.exports = modelCarro;

@@ -8,7 +8,7 @@ const modelCarro = require('../model/modelCarros');
 const router = express.Router();
 
 //rotas de crud de categoria
-router.post('/cadastrarCategoria', (req, res)=>{
+router.post('/cadastrarCarro', (req, res)=>{
     console.log(req.body);
     // let nome_categoria = req.body.nome_categoria;
     let {nome_carro, modelo_carro} = req.body;
@@ -38,7 +38,7 @@ router.post('/cadastrarCategoria', (req, res)=>{
 });
 
 //ROTA DE LISTAGEM DE CATEGORIA SEM CRITÉRIO
-router.get('/listarCategoria', (req, res)=>{
+router.get('/listarCarro', (req, res)=>{
 
     modelCarro.findAll()
         .then(
@@ -63,7 +63,7 @@ router.get('/listarCategoria', (req, res)=>{
 });
 
 //ROTA DE LISTAGEM DE CATEGORIA POR COD_CATEGORIA
-router.get('/listarCategoriaPK/:cod_carro', (req, res)=>{
+router.get('/listarCarroPK/:cod_carro', (req, res)=>{
 
     //DECLARAR E RECEBER O DADO DE CODIGO DE CATEGORIA
     let {cod_carro} = req.params;
@@ -92,7 +92,7 @@ router.get('/listarCategoriaPK/:cod_carro', (req, res)=>{
 });
 
 //ROTA DE LISTAGEM DE CATEGORIA POR NOME_CATEGORIA
-router.get('/listarCategoriaNOME/:nome_carro', (req, res)=>{
+router.get('/listarCarroNOME/:nome_carro', (req, res)=>{
 
     let {nome_carro, modelo_carro} = req.params;
 
@@ -119,7 +119,7 @@ router.get('/listarCategoriaNOME/:nome_carro', (req, res)=>{
 });
 
 //ROTA DE ALTERAÇÃO DE CATEGORIA
-router.put('/alterarCategoria', (req, res)=>{
+router.put('/alterarCarro', (req, res)=>{
 
     // const cod_categoria = req.body.cod_categoria;
     // const nome_categoria = req.body.nome_categoria;
@@ -148,7 +148,7 @@ router.put('/alterarCategoria', (req, res)=>{
 });
 
 //ROTA DE EXCLUSÃO DE CATEGORIA
-router.delete('/excluirCategoria/:cod_carro', (req, res)=>{
+router.delete('/excluirCarro/:cod_carro', (req, res)=>{
     console.log(req.params);
     let {cod_carro} = req.params
 
