@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "719e514d-c504-41e1-87ff-4b6a93d402bd",
+		"name": "2DS-PW2-API-CARROS-2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CARROS",
+			"item": [
+				{
+					"name": "cadastrarCarro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_carro\":\"Camaro\",\r\n    \"modelo_carro\":\"SUV\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cadastrarCarro",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cadastrarCarro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarCarro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_categoria\":1,\r\n    \"nome_categoria\":\"JS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/listarCarro",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"listarCarro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarCarroPK",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_categoria\":1,\r\n    \"nome_categoria\":\"JS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/listarCarroPK/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"listarCarroPK",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarCarroNOME",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/listarCarroNOME/Camaro",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"listarCarroNOME",
+								"Camaro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarCarro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_categoria\":1,\r\n    \"nome_categoria\":\"Ferrari\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/alterarCarro",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alterarCarro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirCarro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/excluirCarro/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"excluirCarro",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENTES",
+			"item": [
+				{
+					"name": "cadastrarCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_cliente\":\"Gustavo\",\r\n    \"cpf\":\"2321321321\",\r\n    \"sexo\":1,\r\n    \"telefone\":40028922,\r\n    \"email\":\"nunes@gmail.com\",\r\n    \"endereco\":\"rua da rua N51\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cadastrarCliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cadastrarCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarCliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_categoria\":1,\r\n    \"nome_categoria\":\"JS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/listarCliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"listarCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarClientePK",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_categoria\":1,\r\n    \"nome_categoria\":\"JS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/listarClientePK/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"listarClientePK",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarClienteNOME",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/listarClienteNOME/Gustavo",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"listarClienteNOME",
+								"Gustavo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": 1,\r\n    \"nome_cliente\":\"Nunes\",\r\n    \"cpf\":\"45862512312\",\r\n    \"sexo\":2,\r\n    \"telefone\":41430262,\r\n    \"email\":\"gustavo@gmail.com\",\r\n    \"endereco\":\"rua dom vale N53\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/alterarCliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alterarCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/excluirCliente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"excluirCliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

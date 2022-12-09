@@ -94,9 +94,9 @@ router.get('/listarCarroPK/:cod_carro', (req, res)=>{
 //ROTA DE LISTAGEM DE CATEGORIA POR NOME_CATEGORIA
 router.get('/listarCarroNOME/:nome_carro', (req, res)=>{
 
-    let {nome_carro, modelo_carro} = req.params;
+    let {nome_carro, modelo_carro, cod_carro} = req.params;
 
-    modelCarro.findOne({attributes:['cod_carro', 'nome_carro', 'modelo_carro'],where:{nome_carro, modelo_carro}})
+    modelCarro.findOne({attributes:['cod_carro', 'nome_carro', 'modelo_carro'],where:{nome_carro}})
     .then(
         (response)=>{
             return res.status(200).json({
